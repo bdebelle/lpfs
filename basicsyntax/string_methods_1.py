@@ -32,7 +32,7 @@ print(len(stri))
 print(stri + str(2))
 
 """
-concatination
+concatenation
 """
 
 print("Hello " + " "+ " World !!!")
