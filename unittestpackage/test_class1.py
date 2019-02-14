@@ -11,7 +11,6 @@ in terminal -->  export PYTHONPATH=$PYTHONPATH:. <-- this will set the python pa
 youll be able to import other files from the directory
 """
 import unittest
-import unittestpackage.test_class2
 
 class TestClass1(unittest.TestCase):
 
