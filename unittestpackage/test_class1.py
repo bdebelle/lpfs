@@ -6,8 +6,12 @@ http://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windo
 
 Mac:
 http://stackoverflow.com/questions/3387695/add-to-python-path-mac-os-x
+
+in terminal -->  export PYTHONPATH=$PYTHONPATH:. <-- this will set the python path to the current directory
+youll be able to import other files from the directory
 """
 import unittest
+import unittestpackage.test_class2
 
 class TestClass1(unittest.TestCase):
 
