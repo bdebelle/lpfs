@@ -12,13 +12,18 @@ def setUp():
     print("Running method level tearDown")
 
 @pytest.yield_fixture(scope="class")
-def oneTimeSetUp(browser, osType):
+def oneTimeSetUp(request, browser):
     print("Running one time setUp")
     if browser == "firefox":
+        value = 10
         print("Running Test on FF")
     else:
+        value = 20
         print("Running test on Chrome")
-    yield
+    if request.cls is not None:
+        request.cls.value = value
+
+    yield value
     print("Running one time tearDown")
 
 def pytest_addoption(parser):
